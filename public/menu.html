@@ -1,0 +1,220 @@
+<html>
+<head>
+  <title>Menu | Maria & Tim's Pizzeria</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Lobster&family=Mulish&family=Bitter">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/cart-localstorage@1.1.4/dist/cart-localstorage.min.js" type="text/javascript"></script>
+  <link rel="icon" type="image/x-icon" href="../images/icon.png">
+</head>
+
+<body id="menubody">
+  <nav class="menu">
+    <ul>
+      <li><a class="btn btn-light" href="/users/login" role="button">Log in</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg text-center">
+        <a href="/" id="mtphome">
+          <img src="../images/icon.png" id="icon"></img>
+          <h1 id="mtp">Maria & Tim's Pizzeria</h1>
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg"></div>
+      <div class="col-lg text-center">
+        <img src="../images/maria.png" class="pizzaimg"></img>
+        <div class="dropdown">
+          <h4>Maria's Specialty Pizza</h4>
+          <div class="dropdown-content">
+            <p style="color: black">spicy marinara sauce, italian sausage, bacon, meatball, ham, grilled chicken, beef, pork, pepperoni, fiery flakes seasoning</p>
+          </div>
+        </div>
+        <div class="btn-group-toggle" data-toggle="buttons">
+          <input type="button" class="btn btn-light btn-sm" id="sm" value="S">
+          <input type="button" class="btn btn-light btn-sm" id="mm" value="M">
+          <input type="button" class="btn btn-light btn-sm" id="lm" value="L">
+        </div>
+        <h5 id="pricem"></h5>
+        <button class="btn btn-light" type="button" id="addm">Add to Cart</button>
+      </div>
+
+      <div class="col-lg text-center">
+        <img src="../images/tim.png" class="pizzaimg"></img>
+        <div class="dropdown">
+          <h4>Tim's Specialty Pizza</h4>
+          <div class="dropdown-content">
+            <p style="color: black">spicy marinara sauce, pepperoni, sliced red chilis, fiery flakes seasoning</p>
+          </div>
+        </div>
+        <div class="btn-group-toggle" data-toggle="buttons">
+          <input type="button" class="btn btn-light btn-sm" id="st" value="S">
+          <input type="button" class="btn btn-light btn-sm" id="mt" value="M">
+          <input type="button" class="btn btn-light btn-sm" id="lt" value="L">
+        </div>
+        <h5 id="pricet"></h5>
+        <button class="btn btn-light" type="button" id="addt">Add to Cart</button>
+      </div>
+
+      <div class="col-lg text-center">
+        <img src="../images/cheese.png" class="pizzaimg"></img>
+        <h4>Cheese Pizza</h4>
+        <div class="btn-group-toggle" data-toggle="buttons">
+          <input type="button" class="btn btn-light btn-sm" id="sc" value="S">
+          <input type="button" class="btn btn-light btn-sm" id="mc" value="M">
+          <input type="button" class="btn btn-light btn-sm" id="lc" value="L">
+        </div>
+        <h5 id="pricec"></h5>
+        <button class="btn btn-light" type="button" id="addc">Add to Cart</button>
+      </div>
+      <div class="col-lg"></div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-lg"></div>
+      <div class="col-lg text-center">
+        <img src="../images/pepperoni.png" class="pizzaimg"></img>
+        <h4>Pepperoni Pizza</h4>
+        <div class="btn-group-toggle" data-toggle="buttons">
+          <input type="button" class="btn btn-light btn-sm" id="sp" value="S">
+          <input type="button" class="btn btn-light btn-sm" id="mp" value="M">
+          <input type="button" class="btn btn-light btn-sm" id="lp" value="L">
+        </div>
+        <h5 id="pricep"></h5>
+        <button class="btn btn-light" type="button" id="addp">Add to Cart</button>
+      </div>
+
+      <div class="col-lg text-center">
+        <img src="../images/supreme.png" class="pizzaimg"></img>
+        <div class="dropdown">
+          <h4>Supreme Pizza</h4>
+          <div class="dropdown-content">
+            <p style="color: black">pepperoni, pork, beef, mushrooms, green bell peppers, onions</p>
+          </div>
+        </div>
+        <div class="btn-group-toggle" data-toggle="buttons">
+          <input type="button" class="btn btn-light btn-sm" id="ss" value="S">
+          <input type="button" class="btn btn-light btn-sm" id="ms" value="M">
+          <input type="button" class="btn btn-light btn-sm" id="ls" value="L">
+        </div>
+        <h5 id="prices"></h5>
+        <button class="btn btn-light" type="button" id="adds">Add to Cart</button>
+      </div>
+
+      <div class="col-lg text-center">
+        <img src="../images/hawaiian.png" class="pizzaimg"></img>
+        <div class="dropdown">
+          <h4>Hawaiian Pizza</h4>
+          <div class="dropdown-content">
+            <p style="color: black">ham, bacon, pineapple</p>
+          </div>
+        </div>
+        <div class="btn-group-toggle" data-toggle="buttons">
+          <input type="button" class="btn btn-light btn-sm" id="sh" value="S">
+          <input type="button" class="btn btn-light btn-sm" id="mh" value="M">
+          <input type="button" class="btn btn-light btn-sm" id="lh" value="L">
+        </div>
+        <h5 id="priceh"></h5>
+        <button class="btn btn-light" type="button" id="addh">Add to Cart</button>
+      </div>
+      <div class="col-lg"></div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-lg-9 mx-auto">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h2 style="color: black; display: inline">Cart</h2>
+            <button class="btn btn-outline-primary" style="display: inline; float: right" id="clear">Clear</button>
+          </div>
+          <div class="card-body">
+            <table class="table text-center">
+              <tbody class="cart">
+              </tbody>
+              <tfoot>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="text-right">Total: <strong class="total"></strong></td>
+                <td></td>
+              </tfoot>
+            </table>
+            <div class="row text-center">
+              <div class="col-lg">
+                <nav>
+                  <ul>
+                    <li>
+                      <div id="delivery" style="display: inline"></div>
+                    </li>
+                    <p id="dorc" style="display: inline; color: black"></p>
+                    <li>
+                      <div id="carryout" style="display: inline"></div>
+                    </li>
+                    <br />
+                    <br />
+                    <!-- <form method="post" action="/menu"> -->
+                      <div id="address" name="address"></div>
+                      <div id="city" name="city"></div>
+                      <div id="state" name="state"></div>
+                      <div id="delzip" name="zipcode"></div>
+                      <div id="phonenum" name="phone"></div>
+                    <!-- </form> -->
+                    <div id="error1" style="color: red"></div>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-lg">
+                <nav>
+                  <ul>
+                    <li>
+                      <div id="card" style="display: inline"></div>
+                    </li>
+                    <p id="corc" style="display: inline; color: black"></p>
+                    <li>
+                      <div id="cash" style="display: inline"></div>
+                    </li>
+                    <div id="cardnum"></div>
+                    <div id="expdate"></div>
+                    <div id="securitycode"></div>
+                    <div id="cardname"></div>
+                    <div id="cardzip"></div>
+                    <div id="error2" style="color: red"></div>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col">
+                <div class="input-group">
+                  <div id="couponinput"></div>
+                  <span class="input-group-append" id="applycoupon"></span>
+                </div>
+                <div id="error4" style="color: red"></div>
+                <br/>
+                <!-- <form method="post" action="/menu"> -->
+                  <div class="text-center" id="placeorder"></div>
+                <!-- </form> -->
+                <div class="text-center" id="placeorder"></div>
+                <div id="error3" style="color: red"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/javascripts/cart.js" type="text/babel"></script>
+  <script src="/javascripts/menu.js" type="text/babel"></script>
+  <script src="/javascripts/errorcheck.js" type="text/babel"></script>
+</body>
+</html>
